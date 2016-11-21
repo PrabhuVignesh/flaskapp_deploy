@@ -13,7 +13,7 @@ def count_me(input_str):
 
 @app.route('/jql/<input_str>')
 def count_me(input_str):
-  jira = JIRA("http://jahsdsjdhf/jsbdj?jql=" +input_str+)
+  jira = JIRA("http://jahsdsjdhf/jsbdj?jql=" +input_str+"sadf")
   middle_str = "you have entered this '" + input_str +"' in URL"
   return jira
 
