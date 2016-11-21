@@ -8,7 +8,14 @@ def hello_world():
 @app.route('/countme/<input_str>')
 def count_me(input_str):
   middle_str = "you have entered this '" + input_str +"' in URL"
-  return input_str
+  return middle_str
+
+
+@app.route('/jql/<input_str>')
+def count_me(input_str):
+  jira = JIRA("http://jahsdsjdhf/jsbdj?jql=" +input_str+)
+  middle_str = "you have entered this '" + input_str +"' in URL"
+  return jira
 
 if __name__ == '__main__':
   app.run()
