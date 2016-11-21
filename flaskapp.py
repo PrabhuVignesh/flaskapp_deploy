@@ -7,7 +7,7 @@ def hello_world():
 
 @app.route('/countme/<input_str>')
 def count_me(input_str):
-  input_str = input_str + " I am appending"  
+  middle_str = "you have entered this '" + input_str +"' in URL"
   return input_str
 
 if __name__ == '__main__':
