@@ -1,11 +1,18 @@
 from flask import Flask
 from jira import JIRA
+import requests
 app = Flask(__name__)
 
-options = {
-    'server': 'http://104.198.10.59/'}
-jira = JIRA(options)
+def get_auth():
+	jira_session = requests.session()
 
+	try:
+		jira_session.post('https://104.198.10.59', auth=("prabhukumar", "Apple@123"), verify=False)
+	except:
+		print('Unable to connect or authenticate with JIRA server.')
+	url = 'https://104.198.10.59/rest/api/2/search?jql=project=SLBAG
+	results = jira_session.get(url)
+	project_data = results.json()
 
 @app.route('/')
 def hello_world():
