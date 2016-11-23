@@ -9,7 +9,8 @@ jira = JIRA(options)
 
 @app.route('/')
 def hello_world():
-  return projects = jira.projects()
+  projects = jira.projects()
+  return projects
 
 @app.route('/countme/<input_str>')
 def count_me(input_str):
