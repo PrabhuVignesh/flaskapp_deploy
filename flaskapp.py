@@ -2,6 +2,11 @@ from flask import Flask
 from jira import JIRA
 app = Flask(__name__)
 
+options = {
+    'server': 'http://104.198.10.59/'}
+jira = JIRA(options)
+
+
 @app.route('/')
 def hello_world():
   return 'Hello from Flask! prabhu changed'
