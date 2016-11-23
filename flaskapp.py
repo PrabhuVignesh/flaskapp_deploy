@@ -11,6 +11,7 @@ def get_auth():
 	PASSWORD="Apple@123"
 	try:
 		jira = JIRA(options=jira_options, basic_auth=(USERNAME, PASSWORD))
+		print jira
 	except Exception as e:
 		print("-======================================")
 		print(e)
