@@ -8,14 +8,13 @@ def get_auth():
 	jira_options = { 'server': 'https://104.198.10.59/rest/auth/1/session'}
 	USERNAME="prabhukumar"
 	PASSWORD="Apple@123"
-    try:
-       	jira = JIRA(options=jira_options, basic_auth=(USERNAME, PASSWORD))
-    except Exception as e:
-    	print("-======================================")
-    	print(e)
-       	jira = None
-
-    return jira
+	try:
+		jira = JIRA(options=jira_options, basic_auth=(USERNAME, PASSWORD))
+	except Exception as e:
+		print("-======================================")
+		print(e)
+		jira = None
+	return jira
 	#jira_session = requests.session()
 	# print("i am in......")
 	# try:
