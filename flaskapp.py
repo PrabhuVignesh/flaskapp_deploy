@@ -1,5 +1,6 @@
 from flask import Flask
 from jira import JIRA
+from jira.client import JIRA
 import requests
 app = Flask(__name__)
 
@@ -13,7 +14,7 @@ def get_auth():
 	except Exception as e:
 		print("-======================================")
 		print(e)
-		jira = None
+		jira = None	
 	return jira
 	#jira_session = requests.session()
 	# print("i am in......")
