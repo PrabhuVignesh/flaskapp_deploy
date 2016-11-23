@@ -9,7 +9,7 @@ app = Flask(__name__)
 def get_auth():
 	USERNAME="prabhukumar"
 	PASSWORD="Apple@123"
-	str = "curl 'https://104.198.10.59/rest/auth/1/session' -X POST -d '{"+	"username"+	":"+USERNAME+","+"password"+	":"+PASSWORD+"}' -H 'Content-Type: application/json'" 
+	str = "curl 'http://104.198.10.59/rest/auth/1/session' -X POST -d '{"+	"username"+	":"+USERNAME+","+"password"+	":"+PASSWORD+"}' -H 'Content-Type: application/json'" 
 	apple =  os.popen(str).read()
 	print os.popen(str).read()
 	# jira_options = { 'server': 'https://104.198.10.59/rest/auth/1/session'}
