@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/testme')
 def get_auth():
-	jira_options = { 'server': https://104.198.10.59/rest/auth/1/session}
+	jira_options = { 'server': 'https://104.198.10.59/rest/auth/1/session'}
 	USERNAME="prabhukumar"
 	PASSWORD="Apple@123"
     try:
