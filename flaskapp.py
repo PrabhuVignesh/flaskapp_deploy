@@ -7,11 +7,11 @@ app = Flask(__name__)
 
 @app.route('/testme')
 def get_auth():
-	USERNAME='"prabhukumar"'
-	PASSWORD='"Apple@123"'
+	USERNAME='"thor"'
+	PASSWORD='"appleapple"'
 	ustr='"username"'
 	pstr='"password"'
-	str = "curl 'http://104.198.10.59/rest/auth/1/session' -X POST -d '{"+	ustr+	":"+USERNAME+","+pstr+	":"+PASSWORD+"}' -H 'Content-Type: application/json'" 
+	str = "curl 'http://104.198.10.59/rest/auth/1/session' -X POST -d '{"+ustr+":"+USERNAME+","+pstr+	":"+PASSWORD+"}' -H 'Content-Type: application/json'" 
 	print str
 	apple =  os.popen(str).read()
 	print os.popen(str).read()
