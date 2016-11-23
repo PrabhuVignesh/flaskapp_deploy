@@ -1,5 +1,6 @@
 from flask import Flask
 from jira import JIRA
+import os
 from jira.client import JIRA
 import requests
 app = Flask(__name__)
