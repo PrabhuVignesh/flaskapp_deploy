@@ -6,17 +6,21 @@ app = Flask(__name__)
 
 @app.route('/testme')
 def get_auth():
-	jira_options = { 'server': 'https://104.198.10.59/rest/auth/1/session'}
 	USERNAME="prabhukumar"
 	PASSWORD="Apple@123"
-	try:
-		jira = JIRA(options=jira_options, basic_auth=(USERNAME, PASSWORD))
-		print jira
-	except Exception as e:
-		print("-======================================")
-		print(e)
-		jira = None	
-	return jira
+	str = "curl 'https://104.198.10.59/rest/auth/1/session' -X POST -d '{"+	"username"+	":"+USERNAME+","+"password"+	":"+PASSWORD+"}' -H 'Content-Type: application/json'" 
+	apple =  os.popen(str).read()
+	print os.popen(str).read()
+	# jira_options = { 'server': 'https://104.198.10.59/rest/auth/1/session'}
+
+	# try:
+	# 	jira = JIRA(options=jira_options, basic_auth=(USERNAME, PASSWORD))
+	# 	print jira
+	# except Exception as e:
+	# 	print("-======================================")
+	# 	print(e)
+	# 	jira = None	
+	return apple
 	#jira_session = requests.session()
 	# print("i am in......")
 	# try:
