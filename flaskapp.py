@@ -3,6 +3,7 @@ from jira import JIRA
 import requests
 app = Flask(__name__)
 
+@app.route('/testme')
 def get_auth():
 	jira_session = requests.session()
 
@@ -10,9 +11,10 @@ def get_auth():
 		jira_session.post('https://104.198.10.59', auth=("prabhukumar", "Apple@123"), verify=False)
 	except:
 		print('Unable to connect or authenticate with JIRA server.')
-	url = 'https://104.198.10.59/rest/api/2/search?jql=project=SLBAG
+	url = 'https://104.198.10.59/rest/api/2/search?jql=project=SLBAG'
 	results = jira_session.get(url)
 	project_data = results.json()
+	return project_data
 
 @app.route('/')
 def hello_world():
