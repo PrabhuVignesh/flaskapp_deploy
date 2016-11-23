@@ -18,7 +18,7 @@ def get_auth():
 
 @app.route('/')
 def hello_world():
-  projects = jira.projects()
+  projects = "jira.projects()"
   return projects
 
 @app.route('/countme/<input_str>')
