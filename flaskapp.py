@@ -9,7 +9,7 @@ jira = JIRA(options)
 
 @app.route('/')
 def hello_world():
-  return 'Hello from Flask! prabhu changed'
+  return projects = jira.projects()
 
 @app.route('/countme/<input_str>')
 def count_me(input_str):
