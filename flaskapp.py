@@ -22,6 +22,10 @@ def basic_auth(username,password):
   authed_jira = JIRA(basic_auth=('vishalkumar2', '$Jira1353'))
   return middle_str
 
+@app.route('/hardlogin')
+def hard_auth():
+  authed_jira = JIRA(basic_auth=('vishalkumar2', '$Jira1353'))
+  return middle_str
 
 
 if __name__ == '__main__':
