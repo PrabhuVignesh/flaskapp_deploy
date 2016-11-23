@@ -13,12 +13,12 @@ def count_me(input_str):
 
 
 @app.route('/auth')
-def count_me(input_str):
+def auth(input_str):
   middle_str = "you have entered this '" + input_str +"' in URL"
   return middle_str
 
 @app.route('/basicauth')
-def count_me(input_str):
+def basic_auth(input_str):
   authed_jira = JIRA(basic_auth=('vishalkumar2', '$Jira1353'))
   return middle_str
 
